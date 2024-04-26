@@ -12,5 +12,7 @@
     --third-font-color: #7E7E7E;
     --fourth-font-color: #101010;
     
-    --main-button-color: linear-gradient(0deg, var(--fifth-bg-color) -11.44%, #FF79DA 123.93%);
+    --main-button-color: linear-gradient(0, var(--fifth-bg-color) -11.44%, #FF79DA 123.93%);
+    --main-button-hover-color: linear-gradient(0, var(--fifth-bg-color) -5.2%, #FF79DA 110.74%);
+    
 }

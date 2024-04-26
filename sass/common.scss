@@ -16,6 +16,11 @@
     color: var(--secondary-font-color);
     font-size: 1rem;
     font-weight: 500;
+
+    &:hover {
+        background: var(--main-button-hover-color);
+        cursor: pointer;
+    }
 }
 
 .fa-gray {
