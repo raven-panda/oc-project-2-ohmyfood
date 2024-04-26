@@ -18,7 +18,7 @@
     font-weight: 500;
 
     &:hover {
-        background: var(--main-button-hover-color);
+        filter: brightness(120%);
         cursor: pointer;
     }
 }
