@@ -1,2 +1,7 @@
+# Auto generated files / dependencies
 node_modules
+assets/style
+
+# Other
 *.txt
+.vscode
