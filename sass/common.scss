@@ -14,7 +14,7 @@
     background: var(--main-button-color);
     padding: 13px 16px;
     color: var(--secondary-font-color);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -27,13 +27,53 @@
 }
 
 .page-title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .page-subtitle {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 300;
     margin-bottom: 27px;
+}
+
+.section-title {
+    margin-bottom: 1.625rem;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-picture {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card-details {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 13px;
+    background-color: var(--main-bg-color);
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.card-subtitle {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.card-like-button {
+    font-size: 1.375rem;
+    color: var(--fourth-font-color);
 }
