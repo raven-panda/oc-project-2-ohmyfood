@@ -1,3 +1,7 @@
+#homepage-main {
+    background-color: var(--secondary-bg-color);
+}
+
 .homepage-heading {
     background: var(--secondary-bg-color);
     padding: 39px 34px;
@@ -15,8 +19,12 @@
     width: 100%;
 }
 
-.functionning-section {
-    padding: 0 20px 0 20px;
+.homepage-section {
+    padding: 46px 20px;
+}
+
+#functionning-section {
+    background-color: var(--main-bg-color);
 }
 
 .functionning-list {
@@ -24,11 +32,10 @@
     flex-direction: column;
     row-gap: 25px;
     padding-left: 12px;
-
     counter-reset: item;
     list-style-type: none;
 
-    li:before {
+    li::before {
         content: counter(item);
         counter-increment: item;
         
@@ -50,12 +57,12 @@
         background: var(--secondary-bg-color);
 
         box-shadow: 0px 4px 15px 0px var(--main-shadow-color);
-
-
+        padding: 26px 0;
         border-radius: 20px;
 
         .fa-solid {
             margin-left: 0.5em;
+            font-size: 1.2em;
         }
     }
 }
