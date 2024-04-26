@@ -17,6 +17,12 @@ button {
     background: none;
 }
 
-h1, h2 {
+h1, h2, h4, p {
     margin: 0;
+}
+
+a {
+    color: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
 }
