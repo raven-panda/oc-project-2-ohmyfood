@@ -1,0 +1,16 @@
+.homepage-heading {
+    background: var(--secondary-bg-color);
+    padding: 39px 34px;
+}
+
+#restaurant-place-form {
+    padding: 17px 0;
+    box-shadow: 0px 4px 4px 0px var(--main-shadow-color);
+    background: var(--third-bg-color);
+    position: relative;
+    z-index: 1;
+}
+
+#restaurant-place-button {
+    width: 100%;
+}
