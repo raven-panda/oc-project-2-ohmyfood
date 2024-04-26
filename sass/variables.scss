@@ -3,11 +3,13 @@
     --secondary-bg-color: #F6F6F6;
     --third-bg-color: #EAEAEA;
     --fourth-bg-color: #353535;
+    --fifth-bg-color: #9356DC;
 
     --main-shadow-color: #00000026;
 
     --main-font-color: #000000;
     --secondary-font-color: #FFFFFF;
+    --third-font-color: #7E7E7E;
     
-    --main-button-color: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+    --main-button-color: linear-gradient(0deg, var(--fifth-bg-color) -11.44%, #FF79DA 123.93%);
 }
