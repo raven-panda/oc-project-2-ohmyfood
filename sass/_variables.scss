@@ -1,4 +1,5 @@
 :root {
+    // Color variables
     --main-bg-color: #FFFFFF;
     --secondary-bg-color: #F6F6F6;
     --third-bg-color: #EAEAEA;
@@ -19,4 +20,7 @@
     --main-button-color: linear-gradient(0, var(--fifth-grad1-bg-color) -11.44%, var(--fifth-grad2-bg-color) 123.93%);
 
     --secondary-button-color: linear-gradient(193.33deg, var(--fifth-grad1-bg-color) -11.44%, var(--fifth-grad2-bg-color) 123.93%);
+
+    // Spacing variables
+    --cards-gap: 16px;
 }

@@ -68,6 +68,6 @@
     }
 }
 
-#restaurant-section .article-card {
-    margin-bottom: 16px;
+#restaurant-section .flex-container {
+    gap: var(--cards-gap);
 }
