@@ -1,34 +1,48 @@
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 2000px) {
+    :root {
+        font-size: 1.5rem;
+    }
+
+    .content-wrapper {
+        max-width: 1440px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
     /** Responsive design for generic style **/
     .mob-col-desktop-row {
         flex-direction: row;
     }
-    
+    .content-wrapper {
+        max-width: 1024px;
+    }
+
     /** Responsive design for common components **/
     .page-title {
         font-size: 2.5rem;
     }
 
     .page-footer {
-        padding-top: 57px;
-        flex-direction: row;
+        padding-top: 3.5625rem;
         justify-content: flex-end;
-        column-gap: 40px;
+        column-gap: 2.5rem;
 
         .footer-logo {
             order: 1;
         }
     }
 
+    /** Responsive design for homepage components **/
+    .functionning-list {
+        column-gap: 2.2813rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /** Responsive design for homepage components **/
     #restaurant-section .flex-container {
         .article-card {
             flex: 0 1 calc(50% - var(--cards-gap) / 2);
         }
-    }
-
-    /** Responsive design for homepage components **/
-    .functionning-list {
-        flex-direction: row;
-        column-gap: 36.5px;
     }
 }
