@@ -14,6 +14,15 @@
     margin: auto;
 }
 
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.mob-col-desktop-row {
+    flex-direction: column;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -90,9 +99,16 @@
 
         .fa-icon {
             font-size: 0.8125rem;
+            margin-right: 8px;
         }
     }
+
+    .footer-nav {
+        column-gap: 11px;
+    }
 }
+
+
 
 .page-title {
     font-size: 1.5rem;

@@ -1,7 +1,23 @@
 @media screen and (min-width: 1440px) {
+    /** Responsive design for generic style **/
+    .mob-col-desktop-row {
+        flex-direction: row;
+    }
+    
     /** Responsive design for common components **/
     .page-title {
         font-size: 2.5rem;
+    }
+
+    .page-footer {
+        padding-top: 57px;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 40px;
+
+        .footer-logo {
+            order: 1;
+        }
     }
 
     #restaurant-section .flex-container {
