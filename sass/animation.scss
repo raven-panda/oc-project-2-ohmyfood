@@ -1,0 +1,17 @@
+@keyframes button-hover-in {
+    0% {
+        filter: brightness(100%);
+    }
+    100% {
+        filter: brightness(120%);
+    }
+}
+
+@keyframes button-hover-out {
+    0% {
+        filter: brightness(120%);
+    }
+    100% {
+        filter: brightness(100%);
+    }
+}
