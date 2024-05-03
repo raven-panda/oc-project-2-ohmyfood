@@ -16,10 +16,11 @@
     color: var(--secondary-font-color);
     font-size: 1rem;
     font-weight: 500;
+    animation: button-hover-out 0.3s ease-in-out forwards;
 
-    &:hover {
-        filter: brightness(120%);
+    &:hover { 
         cursor: pointer;
+        animation: button-hover-in 0.3s ease-in-out forwards;
     }
 }
 
@@ -108,12 +109,30 @@
     font-size: 1rem;
 }
 
+.card-link {
+    position: relative;
+}
+
+.card-new-label {
+    background-color: var(--sixth-bg-color);
+    color: var(--fifth-font-color);
+    position: absolute;
+    border-radius: 2px;
+    right: 13px;
+    top: 13px;
+    padding: 7px 9px;
+}
+
 .card-like-button {
     display: flex;
     align-items: center;
     font-size: 1.375rem;
     color: var(--fourth-font-color);
     appearance: none;
+
+    &:hover {
+        cursor: pointer;
+    }
     
     &::before {
         font-family: 'Font Awesome 6 Free';
