@@ -27,4 +27,4 @@ To install the website on your server, download the source code and deploy it on
 
 ## Usage
 
-Open the website in your browser and follow the instructions to choose a restaurant and compose your menu.
+Open the website at https://raven-panda.github.io/oc-project-2-ohmyfood/ in your browser and follow the instructions to choose a restaurant and compose your menu.
