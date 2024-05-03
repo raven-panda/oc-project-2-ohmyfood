@@ -4,8 +4,8 @@
 @import "./homepage.scss";
 @import "./media.scss";
 
+/** Removing/changing base style **/
 body {
-    margin: 0;
     min-height: 100vh;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif
@@ -18,7 +18,7 @@ button {
     background: none;
 }
 
-h1, h2, h4, p {
+body, h1, h2, h4, p {
     margin: 0;
 }
 

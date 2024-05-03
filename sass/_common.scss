@@ -1,13 +1,8 @@
-.page-header {
-    box-shadow: 0px 2px 4px 0px var(--main-shadow-color);
-    position: relative;
-    z-index: 2;
-    
-    &-logo {
-        margin: 14px 0;
-    }
-}
+/** ----------------------------------------------- **/
+/** ---------------- Generic Style ---------------- **/
+/** ----------------------------------------------- **/
 
+/** Generic Classes **/
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -30,6 +25,19 @@
     text-align: center;
 }
 
+.fa-gray {
+    color: var(--third-font-color);
+}
+
+.fa-purple {
+    color: var(--fifth-bg-color);
+}
+
+.fa-white {
+    color: var(--secondary-font-color);
+}
+
+/** Generic Components **/
 .omf-button {
     border-radius: 25px;
     background: var(--main-button-color);
@@ -47,16 +55,18 @@
     }
 }
 
-.fa-gray {
-    color: var(--third-font-color);
-}
+/** ------------------------------------------------------------ **/
+/** ---------------- Page Main Components Style ---------------- **/
+/** ------------------------------------------------------------ **/
 
-.fa-purple {
-    color: var(--fifth-bg-color);
-}
-
-.fa-white {
-    color: var(--secondary-font-color);
+.page-header {
+    box-shadow: 0px 2px 4px 0px var(--main-shadow-color);
+    position: relative;
+    z-index: 2;
+    
+    &-logo {
+        margin: 14px 0;
+    }
 }
 
 .page-footer {
@@ -96,10 +106,16 @@
     margin-bottom: 27px;
 }
 
+/** ----------------------------------------------------- **/
+/** ---------------- Section/Cards Style ---------------- **/
+/** ----------------------------------------------------- **/
+
+/** Section Components **/
 .section-title {
     margin-bottom: 1.625rem;
 }
 
+/** Card Components **/
 .article-card {
     display: flex;
     flex-direction: column;
