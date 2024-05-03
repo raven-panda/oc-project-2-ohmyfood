@@ -1,12 +1,13 @@
 @media screen and (min-width: 1440px) {
     // Responsive design for common components
-    .functionning-list {
-        flex-direction: row;
+    .page-title {
+        font-size: 2.5rem;
     }
 
 
     // Responsive design for homepage components
     .functionning-list {
         flex-direction: row;
+        column-gap: 36.5px;
     }
 }
