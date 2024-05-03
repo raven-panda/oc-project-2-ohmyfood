@@ -14,6 +14,11 @@
     justify-content: space-around;
 }
 
+.content-wrapper {
+    max-width: 1080px;
+    margin: auto;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
