@@ -4,6 +4,6 @@
   },
   "scripts": {
     "sass": "sass ./sass/style.scss ./assets/style/style.css",
-    "sass:watch": "sass ./sass/style.scss ./assets/style/style.css --watch"
+    "sass:watch": "sass ./sass/main.scss ./assets/style/style.css --watch"
   }
 }
