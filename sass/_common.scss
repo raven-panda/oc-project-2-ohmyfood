@@ -63,10 +63,12 @@ button:hover, input[type="checkbox"]:hover {
 .omf-button {
     border-radius: 1.5625em;
     background: var(--main-button-color);
-    padding: 0.8125em 1em;
+    padding: 13px 18.75px;
     color: var(--secondary-font-color);
     font-size: 1rem;
     font-weight: 500;
+    width: fit-content;
+    align-self: center;
     box-shadow: 0 0.25em 0.25em 0 var(--main-shadow-color);
 
     animation: button-hover-out 0.3s ease-in-out forwards;
@@ -155,6 +157,20 @@ button:hover, input[type="checkbox"]:hover {
     overflow: hidden;
 }
 
+.article-card-row {
+    @extend .article-card;
+    flex-direction: row;
+    width: 100%;
+
+    & .card-details {
+        flex: 1 0 auto;
+    }
+
+    &:hover .card-checked {
+        animation: checkbox-menu-in 0.5s ease-in-out forwards;
+    }
+}
+
 .card-picture {
     display: block;
     width: 100%;
@@ -165,7 +181,7 @@ button:hover, input[type="checkbox"]:hover {
 .card-details {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    
     padding: 16px 13px;
     background-color: var(--main-bg-color);
 }
@@ -213,5 +229,24 @@ button:hover, input[type="checkbox"]:hover {
         color: transparent;
         background-image: var(--secondary-button-color);
         background-clip: text;
+    }
+}
+
+.card-price {
+    display: inherit;
+    align-items: flex-end;
+    margin-left: auto;
+}
+
+.card-checked {
+    display: inherit;
+    width: 0;
+    align-items: center;
+    background: var(--sixth-bg-color);
+    animation: checkbox-menu-out 0.5s ease-in-out forwards;
+
+    .fa-solid {
+        margin: 0 20px;
+        color: var(--secondary-font-color);
     }
 }

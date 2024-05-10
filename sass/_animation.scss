@@ -15,3 +15,21 @@
         filter: brightness(100%);
     }
 }
+
+@keyframes checkbox-menu-in {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: calc(40px + 1.5rem);
+    }
+}
+
+@keyframes checkbox-menu-out {
+    0% {
+        width: calc(40px + 1.5rem);
+    }
+    100% {
+        width: 0;
+    }
+}
