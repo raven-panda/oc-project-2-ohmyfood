@@ -19,6 +19,15 @@
     flex-direction: column;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
 .mob-col-desktop-row {
     flex-direction: column;
 }
@@ -154,7 +163,7 @@ button:hover, input[type="checkbox"]:hover {
 }
 
 .card-details {
-    display: inherit;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 16px 13px;
@@ -163,6 +172,7 @@ button:hover, input[type="checkbox"]:hover {
 
 .card-title {
     font-weight: 700;
+    margin-bottom: 5px;
     font-size: 1.125rem;
 }
 
