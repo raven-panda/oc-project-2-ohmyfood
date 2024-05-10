@@ -1,0 +1,45 @@
+.restaurant-main {
+    padding-top: 50%;
+    position: relative;
+}
+
+.restaurant-picture {
+    position: absolute;
+    object-fit: cover;
+    object-position: 0 60%;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.restaurant-menu {
+    border-radius: 50px;
+    row-gap: 40px;
+    background-color: var(--secondary-bg-color);
+    padding: 32px 13px;
+
+    &-title {
+        font-family: "Shrikhand", sans-serif;
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
+}
+
+.restaurant-section {
+    &-title {
+        font-size: 1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    &-line {
+        border: 2px solid var(--sixth-bg-color);
+        max-width: 40px;
+        margin-top: 2px;
+    }
+
+    & .article-card {
+        align-items: flex-end;
+        margin-top: 12px;
+    }
+}

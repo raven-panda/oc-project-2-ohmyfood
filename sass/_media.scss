@@ -1,13 +1,3 @@
-@media screen and (min-width: 2000px) {
-    :root {
-        font-size: 1.5rem;
-    }
-
-    .content-wrapper {
-        max-width: 1440px;
-    }
-}
-
 @media screen and (min-width: 1024px) {
     /** Responsive design for generic style **/
     .mob-col-desktop-row {
@@ -36,13 +26,21 @@
     .functionning-list {
         column-gap: 2.2813rem;
     }
+
+    .restaurant-main {
+        padding-top: 303px;
+    }
+
+    .restaurant-picture {
+        max-height: 343px;
+    }
 }
 
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {*/
     /** Responsive design for homepage components **/
-    #restaurant-section .flex-container {
+/*    #restaurant-section .flex-container {
         .article-card {
             flex: 0 1 calc(50% - var(--cards-gap) / 2);
         }
     }
-}
+}*/

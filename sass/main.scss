@@ -2,6 +2,7 @@
 @import "./animation.scss";
 @import "./common.scss";
 @import "./homepage.scss";
+@import "./restaurant";
 @import "./media.scss";
 
 /** Removing/changing base style **/
@@ -18,7 +19,7 @@ button {
     background: none;
 }
 
-body, h1, h2, h4, p {
+body, h1, h2, h3, h4, p {
     margin: 0;
 }
 
