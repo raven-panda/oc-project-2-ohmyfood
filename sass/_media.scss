@@ -34,13 +34,20 @@
     .restaurant-picture {
         max-height: 343px;
     }
-}
 
-/*@media screen and (min-width: 768px) {*/
-    /** Responsive design for homepage components **/
-/*    #restaurant-section .flex-container {
+    #restaurant-section .flex-container {
         .article-card {
             flex: 0 1 calc(50% - var(--cards-gap) / 2);
         }
     }
-}*/
+    .restaurant-menu-header {
+        justify-content: center;
+        .restaurant-menu-title {
+            margin-right: 24px;
+        }
+    }
+
+    .article-card-row:hover .card-info { h3, p {
+        width: auto;
+    }}
+}
