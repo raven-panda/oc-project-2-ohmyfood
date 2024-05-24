@@ -1,0 +1,508 @@
+:root {
+  /** ---------- Color Variables ---------- **/
+  /** Background **/
+  --main-bg-color: #FFFFFF;
+  --secondary-bg-color: #F6F6F6;
+  --third-bg-color: #EAEAEA;
+  --fourth-bg-color: #353535;
+  --fifth-bg-color: #9356DC;
+  --fifth-grad1-bg-color: var(--fifth-bg-color);
+  --fifth-grad2-bg-color: #FF79DA;
+  --sixth-bg-color: #99E2D0;
+  /** Shadows **/
+  --main-shadow-color: #00000026;
+  /** Fonts **/
+  --main-font-color: #000000;
+  --secondary-font-color: #FFFFFF;
+  --third-font-color: #7E7E7E;
+  --fourth-font-color: #101010;
+  --fifth-font-color: #008766;
+  /** Gradient **/
+  --main-button-color: linear-gradient(0, var(--fifth-grad1-bg-color) -11.44%, var(--fifth-grad2-bg-color) 123.93%);
+  --secondary-button-color: linear-gradient(193.33deg, var(--fifth-grad1-bg-color) -11.44%, var(--fifth-grad2-bg-color) 123.93%);
+  /** Spacing **/
+  --cards-gap: 100px;
+}
+
+@keyframes button-hover-in {
+  0% {
+    filter: brightness(100%);
+  }
+  100% {
+    filter: brightness(120%);
+  }
+}
+@keyframes button-hover-out {
+  0% {
+    filter: brightness(120%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+@keyframes checkbox-menu-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(40px + 1.5rem);
+  }
+}
+@keyframes checkbox-menu-out {
+  0% {
+    width: calc(40px + 1.5rem);
+  }
+  100% {
+    width: 0;
+  }
+}
+/** ----------------------------------------------- **/
+/** ---------------- Generic Style ---------------- **/
+/** ----------------------------------------------- **/
+/** Generic Classes **/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.mob-col-desktop-row {
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.fa-gray {
+  color: var(--third-font-color);
+}
+
+.fa-purple {
+  color: var(--fifth-bg-color);
+}
+
+.fa-white {
+  color: var(--secondary-font-color);
+}
+
+button:hover, input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+/** Generic Components **/
+.omf-button {
+  border-radius: 1.5625em;
+  background: var(--main-button-color);
+  padding: 13px 18.75px;
+  color: var(--secondary-font-color);
+  font-size: 1rem;
+  font-weight: 500;
+  width: fit-content;
+  align-self: center;
+  box-shadow: 0 0.25em 0.25em 0 var(--main-shadow-color);
+  animation: button-hover-out 0.3s ease-in-out forwards;
+}
+.omf-button:hover {
+  animation: button-hover-in 0.3s ease-in-out forwards;
+}
+
+/** ------------------------------------------------------------ **/
+/** ---------------- Page Main Components Style ---------------- **/
+/** ------------------------------------------------------------ **/
+.page-header {
+  position: relative;
+  box-shadow: 0 2px 4px 0 var(--main-shadow-color);
+  position: relative;
+  z-index: 2;
+}
+.page-header-logo {
+  margin: 14px 0;
+}
+
+.header-go-back-button {
+  position: absolute;
+  left: 23px;
+}
+
+.footer-logo {
+  width: 6.25rem;
+}
+
+.page-footer {
+  background-color: var(--fourth-bg-color);
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-font-color);
+  padding: 22px 25px;
+}
+.page-footer .footer-logo {
+  filter: brightness(100);
+  margin-bottom: 16px;
+}
+.page-footer .footer-link {
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+.page-footer .footer-link.footer-link-with-logo {
+  font-weight: 500;
+}
+.page-footer .footer-link .fa-icon {
+  font-size: 0.8125rem;
+  margin-right: 8px;
+}
+.page-footer .footer-nav {
+  column-gap: 11px;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.page-subtitle {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 27px;
+}
+
+/** ----------------------------------------------------- **/
+/** ---------------- Section/Cards Style ---------------- **/
+/** ----------------------------------------------------- **/
+/** Section Components **/
+.section-title {
+  margin-bottom: 1.625rem;
+}
+
+/** Card Components **/
+.article-card, .article-card-row {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.article-card-row {
+  flex-direction: row;
+  width: 100%;
+}
+.article-card-row .card-details {
+  flex: 1 1 auto;
+}
+.article-card-row .card-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.article-card-row .card-info h3, .article-card-row .card-info p {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.article-card-row .card-title {
+  font-size: 1.125rem;
+}
+.article-card-row p {
+  font-size: 0.9375rem;
+}
+.article-card-row:hover .card-checked {
+  animation: checkbox-menu-in 0.5s ease-in-out forwards;
+}
+.article-card-row:hover .card-info h3, .article-card-row:hover .card-info p {
+  width: 55vw;
+}
+
+.card-picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 13px;
+  background-color: var(--main-bg-color);
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1.125rem;
+}
+
+.card-subtitle {
+  font-weight: 300;
+}
+
+.card-link {
+  position: relative;
+}
+
+.card-new-label {
+  background-color: var(--sixth-bg-color);
+  color: var(--fifth-font-color);
+  position: absolute;
+  border-radius: 0.125em;
+  right: 13px;
+  top: 13px;
+  padding: 7px 9px;
+}
+
+.card-like-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.375rem;
+  color: var(--fourth-font-color);
+  appearance: none;
+}
+.card-like-button::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+}
+.card-like-button:checked::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+  font-weight: 900;
+  color: transparent;
+  background-image: var(--secondary-button-color);
+  background-clip: text;
+}
+
+.card-price {
+  display: inherit;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.card-checked {
+  display: inherit;
+  width: 0;
+  align-items: center;
+  background: var(--sixth-bg-color);
+  animation: checkbox-menu-out 0.5s ease-in-out forwards;
+}
+.card-checked .fa-solid {
+  margin: 0 20px;
+  color: var(--secondary-font-color);
+}
+
+#homepage-main {
+  background-color: var(--secondary-bg-color);
+}
+
+.homepage-heading {
+  background: var(--secondary-bg-color);
+  padding: 39px 34px;
+}
+
+#restaurant-place-form {
+  box-shadow: 0px 4px 4px 0px var(--main-shadow-color);
+  background: var(--third-bg-color);
+  position: relative;
+  z-index: 1;
+}
+
+#restaurant-place-button {
+  padding: 17px 0;
+  width: 100%;
+}
+
+.homepage-section {
+  padding: 46px 20px;
+}
+
+#functionning-section {
+  background-color: var(--main-bg-color);
+}
+
+.functionning-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding-left: 12px;
+  counter-reset: item;
+  list-style-type: none;
+}
+.functionning-list li::before {
+  content: counter(item);
+  counter-increment: item;
+  background-color: var(--fifth-bg-color);
+  border-radius: 1em;
+  text-align: center;
+  font-size: 0.875rem;
+  align-content: center;
+  padding: 0.35em 0.6em;
+  color: var(--secondary-font-color);
+  position: relative;
+  right: 0.8em;
+}
+.functionning-list li {
+  display: flex;
+  align-items: center;
+  background: var(--secondary-bg-color);
+  flex: 1 0 auto;
+  box-shadow: 0px 4px 15px 0px var(--main-shadow-color);
+  padding: 26px 0;
+  border-radius: 20px;
+}
+.functionning-list li .fa-solid {
+  flex: 0 1 2.5rem;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+#restaurant-section .flex-container {
+  column-gap: var(--cards-gap);
+  row-gap: calc(var(--cards-gap) / 2);
+}
+
+.restaurant-main {
+  padding-top: 50%;
+  position: relative;
+}
+
+.restaurant-picture {
+  position: absolute;
+  object-fit: cover;
+  object-position: 0 60%;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.restaurant-menu {
+  border-radius: 50px 50px 0 0;
+  row-gap: 40px;
+  background-color: var(--secondary-bg-color);
+  padding: 32px 13px;
+  align-items: center;
+}
+.restaurant-menu-title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.restaurant-menu-header {
+  width: min(635px, 100%);
+}
+
+.restaurant-section {
+  display: flex;
+  flex-direction: column;
+  width: min(635px, 100%);
+}
+.restaurant-section-title {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.restaurant-section-line {
+  border: 2px solid var(--sixth-bg-color);
+  max-width: 40px;
+  margin-top: 2px;
+}
+.restaurant-section .article-card, .restaurant-section .article-card-row {
+  margin-top: 12px;
+}
+
+#restaurant-submit-btn {
+  padding: 16px 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  /** Responsive design for generic style **/
+  .mob-col-desktop-row {
+    flex-direction: row;
+  }
+  .content-wrapper {
+    max-width: 1024px;
+  }
+  /** Responsive design for common components **/
+  .page-title {
+    font-size: 2.5rem;
+  }
+  .page-footer {
+    padding-top: 3.5625rem;
+    justify-content: flex-end;
+    column-gap: 2.5rem;
+  }
+  .page-footer .footer-logo {
+    order: 1;
+  }
+  /** Responsive design for homepage components **/
+  .functionning-list {
+    column-gap: 2.2813rem;
+  }
+  .restaurant-main {
+    padding-top: 303px;
+  }
+  .restaurant-picture {
+    max-height: 343px;
+  }
+  #restaurant-section .flex-container .article-card, #restaurant-section .flex-container .article-card-row {
+    flex: 0 1 calc(50% - var(--cards-gap) / 2);
+  }
+  .restaurant-menu-header {
+    justify-content: center;
+  }
+  .restaurant-menu-header .restaurant-menu-title {
+    margin-right: 24px;
+  }
+  .article-card-row:hover .card-info h3, .article-card-row:hover .card-info p {
+    width: auto;
+  }
+}
+/** Removing/changing base style **/
+body {
+  min-height: 100vh;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+body, h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */
