@@ -455,6 +455,7 @@ button:hover, input[type=checkbox]:hover {
   .page-footer {
     padding-top: 3.5625rem;
     justify-content: flex-end;
+    align-items: center;
     column-gap: 2.5rem;
   }
   .page-footer .footer-logo {
