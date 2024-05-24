@@ -1,4 +1,7 @@
 @media screen and (min-width: 1024px) {
+    :root {
+        --cards-gap: 100px;
+    }
     /** Responsive design for generic style **/
     .mob-col-desktop-row {
         flex-direction: row;
@@ -36,6 +39,8 @@
     }
 
     #restaurant-section .flex-container {
+        gap: calc(var(--cards-gap) / 2) var(--cards-gap);
+        
         .article-card {
             flex: 0 1 calc(50% - var(--cards-gap) / 2);
         }

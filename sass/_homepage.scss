@@ -69,6 +69,5 @@
 }
 
 #restaurant-section .flex-container {
-    column-gap: var(--cards-gap);
-    row-gap: calc(var(--cards-gap) / 2)
+    row-gap: var(--cards-gap);
 }

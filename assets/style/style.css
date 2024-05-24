@@ -21,7 +21,7 @@
   --main-button-color: linear-gradient(0, var(--fifth-grad1-bg-color) -11.44%, var(--fifth-grad2-bg-color) 123.93%);
   --secondary-button-color: linear-gradient(193.33deg, var(--fifth-grad1-bg-color) -11.44%, var(--fifth-grad2-bg-color) 123.93%);
   /** Spacing **/
-  --cards-gap: 100px;
+  --cards-gap: 18px;
 }
 
 @keyframes button-hover-in {
@@ -381,8 +381,7 @@ button:hover, input[type=checkbox]:hover {
 }
 
 #restaurant-section .flex-container {
-  column-gap: var(--cards-gap);
-  row-gap: calc(var(--cards-gap) / 2);
+  row-gap: var(--cards-gap);
 }
 
 .restaurant-main {
@@ -439,6 +438,9 @@ button:hover, input[type=checkbox]:hover {
 }
 
 @media screen and (min-width: 1024px) {
+  :root {
+    --cards-gap: 100px;
+  }
   /** Responsive design for generic style **/
   .mob-col-desktop-row {
     flex-direction: row;
@@ -467,6 +469,9 @@ button:hover, input[type=checkbox]:hover {
   }
   .restaurant-picture {
     max-height: 343px;
+  }
+  #restaurant-section .flex-container {
+    gap: calc(var(--cards-gap) / 2) var(--cards-gap);
   }
   #restaurant-section .flex-container .article-card, #restaurant-section .flex-container .article-card-row {
     flex: 0 1 calc(50% - var(--cards-gap) / 2);
