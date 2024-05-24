@@ -83,6 +83,7 @@ button:hover, input[type="checkbox"]:hover {
 /** ------------------------------------------------------------ **/
 
 .page-header {
+    position: relative;
     box-shadow: 0 2px 4px 0 var(--main-shadow-color);
     position: relative;
     z-index: 2;
@@ -90,6 +91,11 @@ button:hover, input[type="checkbox"]:hover {
     &-logo {
         margin: 14px 0;
     }
+}
+
+.header-go-back-button {
+    position: absolute;
+    left: 23px;
 }
 
 .footer-logo {
