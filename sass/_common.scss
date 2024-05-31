@@ -214,6 +214,10 @@ button:hover, input[type="checkbox"]:hover {
     justify-content: space-between;
     padding: 16px 13px;
     background-color: var(--main-bg-color);
+    .card-info {
+        flex: 1 0 auto;
+        min-width: 0;
+    }
 }
 
 .card-title {
@@ -240,6 +244,7 @@ button:hover, input[type="checkbox"]:hover {
     padding: 7px 9px;
 }
 
+// Card heart checkbox
 .card-like-button {
     display: flex;
     align-items: center;
