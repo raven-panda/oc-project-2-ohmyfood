@@ -39,13 +39,6 @@
         max-height: 343px;
     }
 
-    #restaurant-section .flex-container {
-        gap: calc(var(--cards-gap) / 2) var(--cards-gap);
-        
-        .article-card {
-            flex: 0 1 calc(50% - var(--cards-gap) / 2);
-        }
-    }
     .restaurant-menu-header {
         justify-content: center;
         .restaurant-menu-title {
@@ -56,4 +49,14 @@
     .article-card-row:hover .card-info { h3, p {
         width: auto;
     }}
+}
+
+@media screen and (min-width: 768px) {
+    #restaurant-section .flex-container {
+        gap: calc(var(--cards-gap) / 2) var(--cards-gap);
+        
+        .article-card {
+            flex: 0 1 calc(50% - var(--cards-gap) / 2);
+        }
+    }
 }

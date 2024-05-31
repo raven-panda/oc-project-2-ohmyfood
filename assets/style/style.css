@@ -471,12 +471,6 @@ button:hover, input[type=checkbox]:hover {
   .restaurant-picture {
     max-height: 343px;
   }
-  #restaurant-section .flex-container {
-    gap: calc(var(--cards-gap) / 2) var(--cards-gap);
-  }
-  #restaurant-section .flex-container .article-card, #restaurant-section .flex-container .article-card-row {
-    flex: 0 1 calc(50% - var(--cards-gap) / 2);
-  }
   .restaurant-menu-header {
     justify-content: center;
   }
@@ -485,6 +479,14 @@ button:hover, input[type=checkbox]:hover {
   }
   .article-card-row:hover .card-info h3, .article-card-row:hover .card-info p {
     width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  #restaurant-section .flex-container {
+    gap: calc(var(--cards-gap) / 2) var(--cards-gap);
+  }
+  #restaurant-section .flex-container .article-card, #restaurant-section .flex-container .article-card-row {
+    flex: 0 1 calc(50% - var(--cards-gap) / 2);
   }
 }
 /** Removing/changing base style **/
