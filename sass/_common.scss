@@ -4,9 +4,7 @@
 
 /** Generic Classes **/
 .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flex(row, wrap, space-around);
 }
 
 .content-wrapper {
@@ -14,29 +12,8 @@
     margin: auto;
 }
 
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.space-between {
-    justify-content: space-between;
-}
-
 .mob-col-desktop-row {
     flex-direction: column;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column
 }
 
 .txt-center {
@@ -83,9 +60,9 @@ button:hover, input[type="checkbox"]:hover {
 /** ------------------------------------------------------------ **/
 
 .page-header {
+    @include flex(column, $justify: center, $align: center);
     position: relative;
     box-shadow: 0 2px 4px 0 var(--main-shadow-color);
-    position: relative;
     z-index: 2;
     
     &-logo {
@@ -98,10 +75,6 @@ button:hover, input[type="checkbox"]:hover {
     left: 23px;
 }
 
-.footer-logo {
-    width: 6.25rem;
-}
-
 .page-footer {
     background-color: var(--fourth-bg-color);
     display: flex;
@@ -112,6 +85,7 @@ button:hover, input[type="checkbox"]:hover {
     .footer-logo {
         filter: brightness(100);
         margin-bottom: 16px;
+        width: 6.25rem;
     }
     .footer-link {
         font-weight: 400;
@@ -128,6 +102,7 @@ button:hover, input[type="checkbox"]:hover {
     }
 
     .footer-nav {
+        @include flex(column);
         column-gap: 11px;
     }
 }
@@ -157,43 +132,37 @@ button:hover, input[type="checkbox"]:hover {
 
 /** Card Components **/
 .article-card {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
     border-radius: 15px;
     overflow: hidden;
 }
 
 .article-card-row {
     @extend .article-card;
+    box-shadow: 0px 4px 4px 0px var(--main-shadow-color);
     flex-direction: row;
     width: 100%;
 
-    .card-details {
-        flex: 1 1 auto;
-    }
-    .card-info {
-        flex: 1 1 auto;
-        min-width: 0;
-        
-        h3, p {
-            text-wrap: nowrap;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }
-
-    }
-
-    .card-title {
-        font-size: 1.125rem;
-    }
     p {
         font-size: 0.9375rem;
     }
+
+    .card-checked {
+        display: inherit;
+        width: 0;
+        align-items: center;
+        background: var(--sixth-bg-color);
+        animation: checkbox-menu-out 0.25s ease-in-out forwards;
     
+        .fa-solid {
+            margin: 0 20px;
+            color: var(--secondary-font-color);
+        }
+    }
 
     &:hover {
         .card-checked {
-            animation: checkbox-menu-in 0.5s ease-in-out forwards;
+            animation: checkbox-menu-in 0.25s ease-in-out forwards;
         }
         .card-info h3, .card-info p {
             width: 55vw;
@@ -209,14 +178,22 @@ button:hover, input[type="checkbox"]:hover {
 }
 
 .card-details {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 16px 13px;
     background-color: var(--main-bg-color);
     .card-info {
-        flex: 1 0 auto;
+        flex: 1 1 auto;
         min-width: 0;
+        
+        h3, p {
+            text-wrap: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }
+
     }
 }
 
@@ -271,17 +248,4 @@ button:hover, input[type="checkbox"]:hover {
     display: inherit;
     align-items: flex-end;
     margin-left: auto;
-}
-
-.card-checked {
-    display: inherit;
-    width: 0;
-    align-items: center;
-    background: var(--sixth-bg-color);
-    animation: checkbox-menu-out 0.5s ease-in-out forwards;
-
-    .fa-solid {
-        margin: 0 20px;
-        color: var(--secondary-font-color);
-    }
 }

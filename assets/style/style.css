@@ -62,8 +62,10 @@
 /** Generic Classes **/
 .flex-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: initial;
 }
 
 .content-wrapper {
@@ -71,28 +73,7 @@
   margin: auto;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
 .mob-col-desktop-row {
-  flex-direction: column;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -137,9 +118,13 @@ button:hover, input[type=checkbox]:hover {
 /** ---------------- Page Main Components Style ---------------- **/
 /** ------------------------------------------------------------ **/
 .page-header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  justify-content: center;
+  align-items: center;
   position: relative;
   box-shadow: 0 2px 4px 0 var(--main-shadow-color);
-  position: relative;
   z-index: 2;
 }
 .page-header-logo {
@@ -149,10 +134,6 @@ button:hover, input[type=checkbox]:hover {
 .header-go-back-button {
   position: absolute;
   left: 23px;
-}
-
-.footer-logo {
-  width: 6.25rem;
 }
 
 .page-footer {
@@ -165,6 +146,7 @@ button:hover, input[type=checkbox]:hover {
 .page-footer .footer-logo {
   filter: brightness(100);
   margin-bottom: 16px;
+  width: 6.25rem;
 }
 .page-footer .footer-link {
   font-weight: 400;
@@ -178,6 +160,11 @@ button:hover, input[type=checkbox]:hover {
   margin-right: 8px;
 }
 .page-footer .footer-nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  justify-content: initial;
+  align-items: initial;
   column-gap: 11px;
 }
 
@@ -205,34 +192,34 @@ button:hover, input[type=checkbox]:hover {
 .article-card, .article-card-row {
   display: flex;
   flex-direction: column;
+  flex-wrap: initial;
+  justify-content: initial;
+  align-items: initial;
   border-radius: 15px;
   overflow: hidden;
 }
 
 .article-card-row {
+  box-shadow: 0px 4px 4px 0px var(--main-shadow-color);
   flex-direction: row;
   width: 100%;
-}
-.article-card-row .card-details {
-  flex: 1 1 auto;
-}
-.article-card-row .card-info {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-.article-card-row .card-info h3, .article-card-row .card-info p {
-  text-wrap: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.article-card-row .card-title {
-  font-size: 1.125rem;
 }
 .article-card-row p {
   font-size: 0.9375rem;
 }
+.article-card-row .card-checked {
+  display: inherit;
+  width: 0;
+  align-items: center;
+  background: var(--sixth-bg-color);
+  animation: checkbox-menu-out 0.25s ease-in-out forwards;
+}
+.article-card-row .card-checked .fa-solid {
+  margin: 0 20px;
+  color: var(--secondary-font-color);
+}
 .article-card-row:hover .card-checked {
-  animation: checkbox-menu-in 0.5s ease-in-out forwards;
+  animation: checkbox-menu-in 0.25s ease-in-out forwards;
 }
 .article-card-row:hover .card-info h3, .article-card-row:hover .card-info p {
   width: 55vw;
@@ -246,6 +233,7 @@ button:hover, input[type=checkbox]:hover {
 }
 
 .card-details {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -253,8 +241,13 @@ button:hover, input[type=checkbox]:hover {
   background-color: var(--main-bg-color);
 }
 .card-details .card-info {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   min-width: 0;
+}
+.card-details .card-info h3, .card-details .card-info p {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-title {
@@ -307,28 +300,27 @@ button:hover, input[type=checkbox]:hover {
   margin-left: auto;
 }
 
-.card-checked {
-  display: inherit;
-  width: 0;
-  align-items: center;
-  background: var(--sixth-bg-color);
-  animation: checkbox-menu-out 0.5s ease-in-out forwards;
-}
-.card-checked .fa-solid {
-  margin: 0 20px;
-  color: var(--secondary-font-color);
-}
-
 #homepage-main {
   background-color: var(--secondary-bg-color);
 }
 
 .homepage-heading {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background: var(--secondary-bg-color);
   padding: 39px 34px;
 }
 
 #restaurant-place-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0px 4px 4px 0px var(--main-shadow-color);
   background: var(--third-bg-color);
   position: relative;
@@ -403,6 +395,11 @@ button:hover, input[type=checkbox]:hover {
 }
 
 .restaurant-menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  justify-content: initial;
+  align-items: initial;
   border-radius: 50px 50px 0 0;
   row-gap: 40px;
   background-color: var(--secondary-bg-color);
@@ -415,6 +412,11 @@ button:hover, input[type=checkbox]:hover {
   font-weight: 400;
 }
 .restaurant-menu-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: initial;
+  justify-content: space-between;
+  align-items: initial;
   width: min(635px, 100%);
 }
 
