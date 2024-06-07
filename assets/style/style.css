@@ -56,6 +56,23 @@
     width: 0;
   }
 }
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
 /** ----------------------------------------------- **/
 /** ---------------- Generic Style ---------------- **/
 /** ----------------------------------------------- **/
@@ -112,6 +129,29 @@ button:hover, input[type=checkbox]:hover {
 }
 .omf-button:hover {
   animation: button-hover-in 0.3s ease-in-out forwards;
+}
+
+/** Page loader class **/
+.loader-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: initial;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: loader-fade-out 1s 1.5s linear forwards;
+}
+.loader-container .fa-circle-notch {
+  animation: loader-spin 1s 3 linear;
+}
+.loader-container span {
+  font-size: 1.25rem;
+  margin-left: 16px;
 }
 
 /** ------------------------------------------------------------ **/
