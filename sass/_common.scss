@@ -252,12 +252,14 @@ button:hover, input[type="checkbox"]:hover {
         background-image: var(--secondary-button-color);
         background-clip: text;
         font-weight: bold;
-        opacity: 0;
-        transition: opacity 0.3s;
+        background-position: 100% 20px;
+        background-size: 100% 250%;
+        background-repeat: no-repeat;
+        transition: background-position 0.5s;
     }
 
     &:hover::after {
-        opacity: 1;
+        background-position: 100% 80%;
     }
 }
 

@@ -6,8 +6,8 @@
   --third-bg-color: #EAEAEA;
   --fourth-bg-color: #353535;
   --fifth-bg-color: #9356DC;
-  --fifth-grad1-bg-color: var(--fifth-bg-color);
-  --fifth-grad2-bg-color: #FF79DA;
+  --fifth-grad1-bg-color: #9356DC;
+  --fifth-grad2-bg-color: #ffb9eb;
   --sixth-bg-color: #99E2D0;
   /** Shadows **/
   --main-shadow-color: #00000026;
@@ -19,7 +19,7 @@
   --fifth-font-color: #008766;
   /** Gradient **/
   --main-button-color: linear-gradient(0, var(--fifth-grad1-bg-color) -11.44%, var(--fifth-grad2-bg-color) 123.93%);
-  --secondary-button-color: linear-gradient(193.33deg, var(--fifth-grad1-bg-color) -11.44%, var(--fifth-grad2-bg-color) 123.93%);
+  --secondary-button-color: linear-gradient(180deg, transparent 0, var(--fifth-grad1-bg-color) 40%, var(--fifth-grad2-bg-color) 120%);
   /** Spacing **/
   --cards-gap: 18px;
 }
@@ -284,11 +284,13 @@ button:hover, input[type=checkbox]:hover {
   background-image: var(--secondary-button-color);
   background-clip: text;
   font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.3s;
+  background-position: 100% 20px;
+  background-size: 100% 250%;
+  background-repeat: no-repeat;
+  transition: background-position 0.5s;
 }
 .card-like-button:hover::after {
-  opacity: 1;
+  background-position: 100% 80%;
 }
 
 .card-price {
