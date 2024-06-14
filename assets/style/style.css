@@ -66,18 +66,6 @@
   text-align: center;
 }
 
-.fa-gray {
-  color: var(--third-font-color);
-}
-
-.fa-purple {
-  color: var(--fifth-bg-color);
-}
-
-.fa-white {
-  color: var(--secondary-font-color);
-}
-
 button:hover, input[type=checkbox]:hover {
   cursor: pointer;
 }
@@ -166,6 +154,7 @@ button:hover, input[type=checkbox]:hover {
 .page-footer .footer-link .fa-icon {
   font-size: 0.8125rem;
   margin-right: 8px;
+  color: var(--secondary-font-color);
 }
 .page-footer .footer-nav {
   display: flex;
@@ -382,6 +371,11 @@ button:hover, input[type=checkbox]:hover {
   flex: 0 1 2.5rem;
   font-size: 1.2rem;
   margin-left: 0.5rem;
+  color: var(--third-font-color);
+  transition: color 0.3s;
+}
+.functionning-list li:hover .fa-solid {
+  color: var(--fifth-bg-color);
 }
 
 #restaurant-section .flex-container {
