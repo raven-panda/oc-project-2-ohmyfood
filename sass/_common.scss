@@ -124,7 +124,7 @@ button:hover, input[type="checkbox"]:hover {
     }
 
     .footer-nav {
-        @include flex(column);
+        display: flex;
         column-gap: 11px;
     }
 }

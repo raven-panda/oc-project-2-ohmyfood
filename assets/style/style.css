@@ -201,10 +201,6 @@ button:hover, input[type=checkbox]:hover {
 }
 .page-footer .footer-nav {
   display: flex;
-  flex-direction: column;
-  flex-wrap: initial;
-  justify-content: initial;
-  align-items: initial;
   column-gap: 11px;
 }
 
