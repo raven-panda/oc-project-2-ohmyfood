@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 /** ----------------------------------------------- **/
 /** ---------------- Generic Style ---------------- **/
 /** ----------------------------------------------- **/
@@ -47,11 +49,10 @@ button:hover, input[type="checkbox"]:hover {
     width: fit-content;
     align-self: center;
     box-shadow: 0 0.25em 0.25em 0 var(--main-shadow-color);
-
-    animation: button-hover-out 0.3s ease-in-out forwards;
+    transition: filter 0.3s;
 
     &:hover { 
-        animation: button-hover-in 0.3s ease-in-out forwards;
+        filter: brightness(120%);
     }
 }
 
@@ -174,7 +175,7 @@ button:hover, input[type="checkbox"]:hover {
         width: 0;
         align-items: center;
         background: var(--sixth-bg-color);
-        animation: checkbox-menu-out 0.25s ease-in-out forwards;
+        transition: width 0.25s;
     
         .fa-solid {
             margin: 0 20px;
@@ -184,7 +185,7 @@ button:hover, input[type="checkbox"]:hover {
 
     &:hover {
         .card-checked {
-            animation: checkbox-menu-in 0.25s ease-in-out forwards;
+            width: calc(40px + 1.5rem);
         }
         .card-info h3, .card-info p {
             width: 55vw;
@@ -250,19 +251,24 @@ button:hover, input[type="checkbox"]:hover {
     font-size: 1.375rem;
     color: var(--fourth-font-color);
     appearance: none;
-    
-    &::before {
+
+    &::before, &::after {
         font-family: 'Font Awesome 6 Free';
         content: '\f004';
     }
-
-    &:checked::before {
-        font-family: 'Font Awesome 6 Free';
-        content: '\f004';
-        font-weight: 900;
+    
+    &::after {
+        position: absolute;
         color: transparent;
         background-image: var(--secondary-button-color);
         background-clip: text;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover::after {
+        opacity: 1;
     }
 }
 

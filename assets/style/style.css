@@ -24,38 +24,6 @@
   --cards-gap: 18px;
 }
 
-@keyframes button-hover-in {
-  0% {
-    filter: brightness(100%);
-  }
-  100% {
-    filter: brightness(120%);
-  }
-}
-@keyframes button-hover-out {
-  0% {
-    filter: brightness(120%);
-  }
-  100% {
-    filter: brightness(100%);
-  }
-}
-@keyframes checkbox-menu-in {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: calc(40px + 1.5rem);
-  }
-}
-@keyframes checkbox-menu-out {
-  0% {
-    width: calc(40px + 1.5rem);
-  }
-  100% {
-    width: 0;
-  }
-}
 @keyframes loader-spin {
   0% {
     transform: rotate(0deg);
@@ -125,10 +93,10 @@ button:hover, input[type=checkbox]:hover {
   width: fit-content;
   align-self: center;
   box-shadow: 0 0.25em 0.25em 0 var(--main-shadow-color);
-  animation: button-hover-out 0.3s ease-in-out forwards;
+  transition: filter 0.3s;
 }
 .omf-button:hover {
-  animation: button-hover-in 0.3s ease-in-out forwards;
+  filter: brightness(120%);
 }
 
 /** Page loader class **/
@@ -248,14 +216,14 @@ button:hover, input[type=checkbox]:hover {
   width: 0;
   align-items: center;
   background: var(--sixth-bg-color);
-  animation: checkbox-menu-out 0.25s ease-in-out forwards;
+  transition: width 0.25s;
 }
 .article-card-row .card-checked .fa-solid {
   margin: 0 20px;
   color: var(--secondary-font-color);
 }
 .article-card-row:hover .card-checked {
-  animation: checkbox-menu-in 0.25s ease-in-out forwards;
+  width: calc(40px + 1.5rem);
 }
 .article-card-row:hover .card-info h3, .article-card-row:hover .card-info p {
   width: 55vw;
@@ -317,17 +285,21 @@ button:hover, input[type=checkbox]:hover {
   color: var(--fourth-font-color);
   appearance: none;
 }
-.card-like-button::before {
+.card-like-button::before, .card-like-button::after {
   font-family: "Font Awesome 6 Free";
   content: "\f004";
 }
-.card-like-button:checked::before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f004";
-  font-weight: 900;
+.card-like-button::after {
+  position: absolute;
   color: transparent;
   background-image: var(--secondary-button-color);
   background-clip: text;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card-like-button:hover::after {
+  opacity: 1;
 }
 
 .card-price {
