@@ -41,6 +41,16 @@
     display: none;
   }
 }
+@keyframes stair-animation-key {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /** ----------------------------------------------- **/
 /** ---------------- Generic Style ---------------- **/
 /** ----------------------------------------------- **/
@@ -429,6 +439,41 @@ button:hover, input[type=checkbox]:hover {
   flex-direction: column;
   width: min(635px, 100%);
 }
+.restaurant-section .article-card-row {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.restaurant-section .article-card-row:nth-of-type(1) {
+  animation: stair-animation-key 0.7s 0.1s ease-out forwards;
+}
+.restaurant-section .article-card-row {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.restaurant-section .article-card-row:nth-of-type(2) {
+  animation: stair-animation-key 0.7s 0.2s ease-out forwards;
+}
+.restaurant-section .article-card-row {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.restaurant-section .article-card-row:nth-of-type(3) {
+  animation: stair-animation-key 0.7s 0.3s ease-out forwards;
+}
+.restaurant-section .article-card-row {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.restaurant-section .article-card-row:nth-of-type(4) {
+  animation: stair-animation-key 0.7s 0.4s ease-out forwards;
+}
+.restaurant-section .article-card-row {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.restaurant-section .article-card-row:nth-of-type(5) {
+  animation: stair-animation-key 0.7s 0.5s ease-out forwards;
+}
 .restaurant-section-title {
   font-size: 1rem;
   font-weight: 300;
@@ -504,6 +549,7 @@ body {
   min-height: 100vh;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 button {

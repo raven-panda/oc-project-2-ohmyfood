@@ -10,3 +10,16 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin stair-animation($childClass: "") {
+    @for $j from 1 through 5 {
+        .#{$childClass} {
+            opacity: 0;
+            transform: translateX(100%);
+
+            &:nth-of-type(#{$j}) {
+                animation: stair-animation-key 0.7s #{calc(0.1 * $j)}s ease-out forwards;
+            }
+        }
+    }
+}
