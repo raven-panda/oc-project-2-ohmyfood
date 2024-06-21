@@ -146,17 +146,95 @@ button:hover, input[type="checkbox"]:hover {
 .article-card {
     @include flex(column);
     border-radius: 15px;
+    background-color: var(--main-bg-color);
     overflow: hidden;
+
+    .card-picture {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .card-details {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 13px;
+
+        .card-info {
+            flex: 1 1 auto;
+            min-width: 0;
+            
+            h3, p {
+                text-wrap: nowrap;
+                overflow:hidden;
+                text-overflow: ellipsis;
+            }
+
+        }
+    }
+
+    .card-title {
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 1.125rem;
+    }
+
+    .card-subtitle {
+        font-weight: 300;
+    }
+
+    .card-link {
+        position: relative;
+    }
+
+    .card-new-label {
+        background-color: var(--sixth-bg-color);
+        color: var(--fifth-font-color);
+        position: absolute;
+        border-radius: 0.125em;
+        right: 13px;
+        top: 13px;
+        padding: 7px 9px;
+    }
+
 }
 
 .article-card-row {
-    @extend .article-card;
-    box-shadow: 0px 4px 4px 0px var(--main-shadow-color);
-    flex-direction: row;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-radius: 15px;
+    background-color: var(--main-bg-color);
+    overflow: hidden;
 
-    p {
-        font-size: 0.9375rem;
+    p { font-size: 0.9375rem; }
+    
+    .card-info {
+        width: 100%;
+        h3, p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 15px;
+            min-width: 0;
+            max-width: 100%;
+        }
+
+    }
+
+    .card-details {
+        display: inline-flex;
+        padding: 16px 13px;
+        min-width: 0;
+    }
+
+    .card-price-check {
+        display: flex;
+        .card-price {
+            margin: auto 16px 13px 0;
+        }
     }
 
     .card-checked {
@@ -176,61 +254,7 @@ button:hover, input[type="checkbox"]:hover {
         .card-checked {
             width: calc(40px + 1.5rem);
         }
-        .card-info h3, .card-info p {
-            width: 55vw;
-        }
     }
-}
-
-.card-picture {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-.card-details {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 16px 13px;
-    background-color: var(--main-bg-color);
-    .card-info {
-        flex: 1 1 auto;
-        min-width: 0;
-        
-        h3, p {
-            text-wrap: nowrap;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }
-
-    }
-}
-
-.card-title {
-    font-weight: 700;
-    margin-bottom: 5px;
-    font-size: 1.125rem;
-}
-
-.card-subtitle {
-    font-weight: 300;
-}
-
-.card-link {
-    position: relative;
-}
-
-.card-new-label {
-    background-color: var(--sixth-bg-color);
-    color: var(--fifth-font-color);
-    position: absolute;
-    border-radius: 0.125em;
-    right: 13px;
-    top: 13px;
-    padding: 7px 9px;
 }
 
 // Card heart checkbox
@@ -261,10 +285,4 @@ button:hover, input[type="checkbox"]:hover {
     &:hover::after {
         background-position: 100% 80%;
     }
-}
-
-.card-price {
-    display: inherit;
-    align-items: flex-end;
-    margin-left: auto;
 }

@@ -192,23 +192,90 @@ button:hover, input[type=checkbox]:hover {
 }
 
 /** Card Components **/
-.article-card, .article-card-row {
+.article-card {
   display: flex;
   flex-direction: column;
   flex-wrap: initial;
   justify-content: initial;
   align-items: initial;
   border-radius: 15px;
+  background-color: var(--main-bg-color);
   overflow: hidden;
+}
+.article-card .card-picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.article-card .card-details {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 13px;
+}
+.article-card .card-details .card-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.article-card .card-details .card-info h3, .article-card .card-details .card-info p {
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.article-card .card-title {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1.125rem;
+}
+.article-card .card-subtitle {
+  font-weight: 300;
+}
+.article-card .card-link {
+  position: relative;
+}
+.article-card .card-new-label {
+  background-color: var(--sixth-bg-color);
+  color: var(--fifth-font-color);
+  position: absolute;
+  border-radius: 0.125em;
+  right: 13px;
+  top: 13px;
+  padding: 7px 9px;
 }
 
 .article-card-row {
-  box-shadow: 0px 4px 4px 0px var(--main-shadow-color);
-  flex-direction: row;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border-radius: 15px;
+  background-color: var(--main-bg-color);
+  overflow: hidden;
 }
 .article-card-row p {
   font-size: 0.9375rem;
+}
+.article-card-row .card-info {
+  width: 100%;
+}
+.article-card-row .card-info h3, .article-card-row .card-info p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  min-width: 0;
+  max-width: 100%;
+}
+.article-card-row .card-details {
+  display: inline-flex;
+  padding: 16px 13px;
+  min-width: 0;
+}
+.article-card-row .card-price-check {
+  display: flex;
+}
+.article-card-row .card-price-check .card-price {
+  margin: auto 16px 13px 0;
 }
 .article-card-row .card-checked {
   display: inherit;
@@ -223,58 +290,6 @@ button:hover, input[type=checkbox]:hover {
 }
 .article-card-row:hover .card-checked {
   width: calc(40px + 1.5rem);
-}
-.article-card-row:hover .card-info h3, .article-card-row:hover .card-info p {
-  width: 55vw;
-}
-
-.card-picture {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-}
-
-.card-details {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 16px 13px;
-  background-color: var(--main-bg-color);
-}
-.card-details .card-info {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-.card-details .card-info h3, .card-details .card-info p {
-  text-wrap: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card-title {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 1.125rem;
-}
-
-.card-subtitle {
-  font-weight: 300;
-}
-
-.card-link {
-  position: relative;
-}
-
-.card-new-label {
-  background-color: var(--sixth-bg-color);
-  color: var(--fifth-font-color);
-  position: absolute;
-  border-radius: 0.125em;
-  right: 13px;
-  top: 13px;
-  padding: 7px 9px;
 }
 
 .card-like-button {
@@ -301,12 +316,6 @@ button:hover, input[type=checkbox]:hover {
 }
 .card-like-button:hover::after {
   background-position: 100% 80%;
-}
-
-.card-price {
-  display: inherit;
-  align-items: flex-end;
-  margin-left: auto;
 }
 
 #homepage-main {
@@ -484,7 +493,7 @@ button:hover, input[type=checkbox]:hover {
   max-width: 40px;
   margin-top: 2px;
 }
-.restaurant-section .article-card, .restaurant-section .article-card-row {
+.restaurant-section .article-card-row {
   margin-top: 12px;
 }
 
@@ -540,7 +549,7 @@ button:hover, input[type=checkbox]:hover {
   #restaurant-section .flex-container {
     gap: calc(var(--cards-gap) / 2) var(--cards-gap);
   }
-  #restaurant-section .flex-container .article-card, #restaurant-section .flex-container .article-card-row {
+  #restaurant-section .flex-container .article-card {
     flex: 0 1 calc(50% - var(--cards-gap) / 2);
   }
 }
