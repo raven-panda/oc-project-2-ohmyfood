@@ -1,5 +1,3 @@
-@use 'sass:list';
-
 /** ----------------------------------------------- **/
 /** ---------------- Generic Style ---------------- **/
 /** ----------------------------------------------- **/
@@ -16,10 +14,6 @@
 
 .mob-col-desktop-row {
     flex-direction: column;
-}
-
-.txt-center {
-    text-align: center;
 }
 
 button:hover, input[type="checkbox"]:hover {
@@ -157,7 +151,6 @@ button:hover, input[type="checkbox"]:hover {
     }
 
     .card-details {
-        flex: 0 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

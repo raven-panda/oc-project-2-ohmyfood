@@ -72,10 +72,6 @@
   flex-direction: column;
 }
 
-.txt-center {
-  text-align: center;
-}
-
 button:hover, input[type=checkbox]:hover {
   cursor: pointer;
 }
@@ -209,7 +205,6 @@ button:hover, input[type=checkbox]:hover {
   object-fit: cover;
 }
 .article-card .card-details {
-  flex: 0 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -540,9 +535,6 @@ button:hover, input[type=checkbox]:hover {
   }
   .restaurant-menu-header .restaurant-menu-title {
     margin-right: 24px;
-  }
-  .article-card-row:hover .card-info h3, .article-card-row:hover .card-info p {
-    width: auto;
   }
 }
 @media screen and (min-width: 768px) {
