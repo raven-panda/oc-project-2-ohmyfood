@@ -377,11 +377,12 @@ button:hover, input[type=checkbox]:hover {
 .functionning-list li {
   display: flex;
   align-items: center;
-  background: var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color);
   flex: 1 0 auto;
   box-shadow: 0px 4px 15px 0px var(--main-shadow-color);
   padding: 26px 0;
   border-radius: 20px;
+  transition: background-color 0.3s;
 }
 .functionning-list li .fa-solid {
   flex: 0 1 2.5rem;
@@ -389,6 +390,9 @@ button:hover, input[type=checkbox]:hover {
   margin-left: 0.5rem;
   color: var(--third-font-color);
   transition: color 0.3s;
+}
+.functionning-list li:hover {
+  background-color: var(--third-bg-color);
 }
 .functionning-list li:hover .fa-solid {
   color: var(--fifth-bg-color);
